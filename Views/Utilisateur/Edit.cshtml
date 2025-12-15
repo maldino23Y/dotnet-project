@@ -1,0 +1,17 @@
+﻿@model SuiviEntrainementSportif.Models.Utilisateur
+
+<h2>Modifier un utilisateur</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Nom</label>
+    <input class="form-control" name="Nom" value="@Model.Nom" />
+
+    <label>Email</label>
+    <input class="form-control" name="Email" value="@Model.Email" />
+
+    <button class="btn btn-primary mt-3">Modifier</button>
+
+</form>

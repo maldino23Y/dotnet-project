@@ -1,0 +1,27 @@
+﻿@model SuiviEntrainementSportif.Models.Entrainement
+
+<h2>Ajouter un entraînement</h2>
+
+<form asp-action="Ajouter" method="post">
+    <div class="form-group">
+        <label>Nom</label>
+        <input asp-for="Nom" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Type</label>
+        <input asp-for="Type" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Durée (minutes)</label>
+        <input asp-for="Duree" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Calories brûlées</label>
+        <input asp-for="CaloriesBrulees" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        <input asp-for="Date" type="date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success mt-2">Enregistrer</button>
+</form>

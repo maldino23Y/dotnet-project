@@ -1,0 +1,32 @@
+﻿@model List<SuiviEntrainementSportif.Models.Utilisateur>
+
+<h2>Liste des utilisateurs</h2>
+
+<a href="/Utilisateur/Create" class="btn btn-success mb-3">Ajouter</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nom</td>
+                <td>@item.Email</td>
+
+                <td>
+                    <a href="/Utilisateur/Edit/@item.Id" class="btn btn-warning btn-sm">Modifier</a>
+                    <a href="/Utilisateur/Delete/@item.Id" class="btn btn-danger btn-sm">Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

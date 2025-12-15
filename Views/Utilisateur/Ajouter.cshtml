@@ -1,0 +1,17 @@
+﻿@model SuiviEntrainementSportif.Models.Utilisateur
+
+<h2>Ajouter un utilisateur</h2>
+
+<form asp-action="Ajouter" method="post">
+    <div class="form-group">
+        <label>Nom</label>
+        <input asp-for="Nom" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Enregistrer</button>
+</form>

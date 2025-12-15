@@ -1,0 +1,20 @@
+﻿@model SuiviEntrainementSportif.Models.ObjectifSportif
+
+<h2>Modifier un objectif</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Description</label>
+    <input class="form-control" name="Description" value="@Model.Description" />
+
+    <label>Calories cible</label>
+    <input class="form-control" type="number" name="CaloriesCible" value="@Model.CaloriesCible" />
+
+    <label>Durée cible (min)</label>
+    <input class="form-control" type="number" name="DureeCible" value="@Model.DureeCible" />
+
+    <button class="btn btn-primary mt-3">Modifier</button>
+
+</form>

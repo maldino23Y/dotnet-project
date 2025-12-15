@@ -1,0 +1,26 @@
+﻿@model SuiviEntrainementSportif.Models.Entrainement
+
+<h2>Modifier un entraînement</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <label>Nom</label>
+    <input class="form-control" name="Nom" value="@Model.Nom" />
+
+    <label>Type</label>
+    <input class="form-control" name="Type" value="@Model.Type" />
+
+    <label>Durée (min)</label>
+    <input class="form-control" type="number" name="Duree" value="@Model.Duree" />
+
+    <label>Calories brûlées</label>
+    <input class="form-control" type="number" name="CaloriesBrulees" value="@Model.CaloriesBrulees" />
+
+    <label>Date</label>
+    <input class="form-control" type="date" name="Date" value="@Model.Date.ToString("yyyy-MM-dd")" />
+
+    <button class="btn btn-primary mt-3">Modifier</button>
+
+</form>
