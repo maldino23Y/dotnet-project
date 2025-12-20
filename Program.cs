@@ -1,22 +1,19 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using SuiviEntrainementSportif.Data;
 using SuiviEntrainementSportif.Models;
+using SuiviEntrainementSportif.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders().AddDefaultUI();
-app.UseAuthentication();
-app.UseAuthorization();
 
-// Configure EF Core (SQLite) and Identity
+// Configure EF Core (SQL Server) and Identity
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                       ?? "Data Source=app.db";
+                       ?? "Server=(localdb)\\MSSQLLocalDB;Database=SuiviEntrainementDB;Trusted_Connection=True;MultipleActiveResultSets=true";
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
@@ -28,6 +25,9 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+// register IEmailSender, etc.
+builder.Services.AddSingleton<IEmailSender, SuiviEntrainementSportif.Services.DummyEmailSender>();
 
 var app = builder.Build();
 

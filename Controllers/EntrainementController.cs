@@ -1,60 +1,105 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SuiviEntrainementSportif.Data;
 using SuiviEntrainementSportif.Models;
-using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace SuiviEntrainementSportif.Controllers
 {
     public class EntrainementController : Controller
     {
-        // Simulation database
-        public static List<Entrainement> Data = new List<Entrainement>();
+        private readonly ApplicationDbContext _context;
 
-        public IActionResult Index()
+        public EntrainementController(ApplicationDbContext context)
         {
-            return View(Data);
+            _context = context;
         }
 
+        // GET: /Entrainement
+        public async Task<IActionResult> Index()
+        {
+            var list = await _context.Entrainements
+                                     .OrderByDescending(e => e.Date)
+                                     .ToListAsync();
+            return View(list);
+        }
+
+        // GET: /Entrainement/Create
         public IActionResult Create()
         {
             return View();
         }
 
+        // POST: /Entrainement/Create
         [HttpPost]
-        public IActionResult Create(Entrainement e)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Entrainement e)
         {
-            e.Id = Data.Count + 1;
-            Data.Add(e);
-            return RedirectToAction("Index");
+            if (!ModelState.IsValid) return View(e);
+
+            _context.Entrainements.Add(e);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Edit(int id)
+        // GET: /Entrainement/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            var entr = Data.Find(x => x.Id == id);
+            if (id == null) return NotFound();
+
+            var entr = await _context.Entrainements.FindAsync(id.Value);
+            if (entr == null) return NotFound();
+
             return View(entr);
         }
 
+        // POST: /Entrainement/Edit
         [HttpPost]
-        public IActionResult Edit(Entrainement e)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(Entrainement e)
         {
-            var old = Data.Find(x => x.Id == e.Id);
-            if (old != null)
-            {
-                Data.Remove(old);
-            }
+            if (!ModelState.IsValid) return View(e);
 
-            Data.Add(e);
-            return RedirectToAction("Index");
+            var existing = await _context.Entrainements.FindAsync(e.Id);
+            if (existing == null) return NotFound();
+
+            // Update fields
+            existing.Nom = e.Nom;
+            existing.Type = e.Type;
+            existing.Duree = e.Duree;
+            existing.Calories = e.Calories;
+            existing.Date = e.Date;
+
+            _context.Entrainements.Update(existing);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
 
-        public IActionResult Delete(int id)
+        // GET: /Entrainement/Delete/5
+        public async Task<IActionResult> Delete(int? id)
         {
-            var entr = Data.Find(x => x.Id == id);
+            if (id == null) return NotFound();
+
+            var entr = await _context.Entrainements.FindAsync(id.Value);
             if (entr != null)
             {
-                Data.Remove(entr);
+                _context.Entrainements.Remove(entr);
+                await _context.SaveChangesAsync();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -1,8 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Suivi_d_entrainement_sportif.Models;
+using SuiviEntrainementSportif.Models;
+using Microsoft.Extensions.Logging;
 
-namespace Suivi_d_entrainement_sportif.Controllers
+namespace SuiviEntrainementSportif.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,10 +24,5 @@ namespace Suivi_d_entrainement_sportif.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

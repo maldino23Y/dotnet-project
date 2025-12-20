@@ -1,12 +1,665 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ChangePasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ChangePasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\launch.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\tasks.vs.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPasswordConfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ResetPasswordConfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ResetPassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPasswordConfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ForgotPasswordConfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ForgotPassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ResetPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ResetPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ForgotPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ForgotPasswordViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\EntrainementController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\EntrainementController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\Entrainement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Entrainement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Utilisateur\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Utilisateur\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\images\\time-for-fitness.jpg||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\images\\time-for-fitness.jpg||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Shared\\_Layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\Privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\EditProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\EditProfileViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ManageViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ManageViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\EditProfile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\EditProfile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ChangePassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\ChangePassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Services\\DummyEmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\DummyEmailSender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ApplicationUser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\SuiviEntrainementSportif.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SuiviEntrainementSportif.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Entrainement\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\RegisterViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Entrainement\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Account\\Register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\ErrorViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Example\\DataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Example\\DataAccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T03:33:18.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launch.vs.json",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\launch.vs.json",
+              "RelativeDocumentMoniker": ".vs\\launch.vs.json",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\launch.vs.json",
+              "RelativeToolTip": ".vs\\launch.vs.json",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-20T03:26:55.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "tasks.vs.json",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\tasks.vs.json",
+              "RelativeDocumentMoniker": ".vs\\tasks.vs.json",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\.vs\\tasks.vs.json",
+              "RelativeToolTip": ".vs\\tasks.vs.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-20T03:10:56.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ChangePasswordViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ChangePasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ChangePasswordViewModel.cs",
+              "RelativeToolTip": "Models\\ChangePasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:50:45.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-17T13:34:39.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ForgotPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "RelativeToolTip": "Views\\Account\\ForgotPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T23:33:23.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ResetPassword.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPassword.cshtml",
+              "RelativeToolTip": "Views\\Account\\ResetPassword.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T23:33:33.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Views\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T23:33:11.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ResetPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ResetPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ResetPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ResetPasswordViewModel.cs",
+              "RelativeToolTip": "Models\\ResetPasswordViewModel.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T23:32:22.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T14:01:36.76Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPasswordConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "RelativeToolTip": "Views\\Account\\ResetPasswordConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T23:33:43.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ForgotPasswordViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ForgotPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ForgotPasswordViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ForgotPasswordViewModel.cs",
+              "RelativeToolTip": "Models\\ForgotPasswordViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T23:32:13.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Utilisateur\\Index.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Utilisateur\\Index.cshtml",
+              "RelativeToolTip": "Views\\Utilisateur\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T22:18:29.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-12-19T22:09:53.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EntrainementController.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\EntrainementController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EntrainementController.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\EntrainementController.cs",
+              "RelativeToolTip": "Controllers\\EntrainementController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:17:21.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "time-for-fitness.jpg",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\images\\time-for-fitness.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\images\\time-for-fitness.jpg",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\images\\time-for-fitness.jpg",
+              "RelativeToolTip": "wwwroot\\images\\time-for-fitness.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-12-19T22:39:00.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwEkAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:30:03.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\AccountController.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:36:23.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T22:18:08.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:47:37.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Entrainement.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\Entrainement.cs",
+              "RelativeDocumentMoniker": "Models\\Entrainement.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\Entrainement.cs",
+              "RelativeToolTip": "Models\\Entrainement.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:17:03.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAkwFQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T22:10:35.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-12-19T22:09:59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EditProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\EditProfileViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\EditProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\EditProfileViewModel.cs",
+              "RelativeToolTip": "Models\\EditProfileViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:50:51.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Manage.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Manage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Manage.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Manage.cshtml",
+              "RelativeToolTip": "Views\\Account\\Manage.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:49:53.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ManageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ManageViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ManageViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ManageViewModel.cs",
+              "RelativeToolTip": "Models\\ManageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:50:56.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "Views\\Account\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:49:28.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DummyEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Services\\DummyEmailSender.cs",
+              "RelativeDocumentMoniker": "Services\\DummyEmailSender.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Services\\DummyEmailSender.cs",
+              "RelativeToolTip": "Services\\DummyEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:44:20.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EditProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\EditProfile.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\EditProfile.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\EditProfile.cshtml",
+              "RelativeToolTip": "Views\\Account\\EditProfile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:44:07.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Index.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Index.cshtml",
+              "RelativeToolTip": "Views\\Account\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:36:36.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:30:00.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:26:10.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\RegisterViewModel.cs",
+              "RelativeToolTip": "Models\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T21:25:56.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Entrainement\\Index.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Index.cshtml",
+              "RelativeToolTip": "Views\\Entrainement\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:02:13.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-17T14:05:27.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SuiviEntrainementSportif.csproj",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\SuiviEntrainementSportif.csproj",
+              "RelativeDocumentMoniker": "SuiviEntrainementSportif.csproj",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\SuiviEntrainementSportif.csproj",
+              "RelativeToolTip": "SuiviEntrainementSportif.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-17T13:14:42.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Entrainement\\Create.cshtml",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Views\\Entrainement\\Create.cshtml",
+              "RelativeToolTip": "Views\\Entrainement\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-19T21:17:34.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvxkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:22:33.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:16:21.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Example\\DataAccess.cs",
+              "RelativeDocumentMoniker": "Example\\DataAccess.cs",
+              "ToolTip": "C:\\Users\\malda\\Downloads\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Suivi d\u0027entrainement sportif\\Example\\DataAccess.cs",
+              "RelativeToolTip": "Example\\DataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-14T02:17:05.917Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,24 +1,53 @@
-﻿@model SuiviEntrainementSportif.Models.Entrainement
+ @model SuiviEntrainementSportif.Models.Entrainement
 
 <h2>Ajouter un entraînement</h2>
 
-<form method="post">
+<div class="row justify-content-center">
+  <div class="col-md-8 col-lg-6">
+    <form asp-action="Create" method="post" novalidate>
+      @Html.AntiForgeryToken()
+      <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
 
-    <label>Nom</label>
-    <input class="form-control" name="Nom" />
+      <div class="mb-3">
+        <label asp-for="Nom" class="form-label"></label>
+        <input asp-for="Nom" class="form-control" />
+        <span asp-validation-for="Nom" class="text-danger"></span>
+      </div>
 
-    <label>Type</label>
-    <input class="form-control" name="Type" />
+      <div class="mb-3">
+        <label asp-for="Type" class="form-label"></label>
+        <input asp-for="Type" class="form-control" />
+        <span asp-validation-for="Type" class="text-danger"></span>
+      </div>
 
-    <label>Durée (min)</label>
-    <input class="form-control" type="number" name="Duree" />
+      <div class="row g-2">
+        <div class="col-6 mb-3">
+          <label asp-for="Duree" class="form-label"></label>
+          <input asp-for="Duree" class="form-control" type="number" min="0" />
+          <span asp-validation-for="Duree" class="text-danger"></span>
+        </div>
 
-    <label>Calories brûlées</label>
-    <input class="form-control" type="number" name="CaloriesBrulees" />
+        <div class="col-6 mb-3">
+          <label asp-for="Calories" class="form-label"></label>
+          <input asp-for="Calories" class="form-control" type="number" min="0" />
+          <span asp-validation-for="Calories" class="text-danger"></span>
+        </div>
+      </div>
 
-    <label>Date</label>
-    <input class="form-control" type="date" name="Date" />
+      <div class="mb-3">
+        <label asp-for="Date" class="form-label"></label>
+        <input asp-for="Date" class="form-control" type="date" />
+        <span asp-validation-for="Date" class="text-danger"></span>
+      </div>
 
-    <button class="btn btn-primary mt-3">Enregistrer</button>
+      <div class="d-flex justify-content-end">
+        <a asp-action="Index" class="btn btn-secondary me-2">Annuler</a>
+        <button type="submit" class="btn btn-success">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-</form>
+@section Scripts {
+  <partial name="_ValidationScriptsPartial" />
+}

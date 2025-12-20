@@ -1,8 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Controllers"
+    "\\Controllers",
+    "\\Data",
+    "\\Models",
+    "\\Views",
+    "\\Views\\Account",
+    "\\Views\\Utilisateur",
+    "\\wwwroot",
+    "\\wwwroot\\images"
   ],
-  "SelectedNode": "\\Controllers\\EntrainementController.cs",
+  "SelectedNode": "\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }

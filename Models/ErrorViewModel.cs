@@ -1,4 +1,4 @@
-namespace Suivi_d_entrainement_sportif.Models
+namespace SuiviEntrainementSportif.Models
 {
     public class ErrorViewModel
     {

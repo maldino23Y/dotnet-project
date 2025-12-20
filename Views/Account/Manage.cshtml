@@ -1,0 +1,19 @@
+@model SuiviEntrainementSportif.Models.ManageViewModel
+
+<h2>Manage account</h2>
+
+@if (!string.IsNullOrEmpty(Model.StatusMessage))
+{
+<div class="alert alert-success">@Model.StatusMessage</div>
+}
+
+<div class="card mb-3">
+  <div class="card-body">
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>First name:</strong> @Model.Prenom</p>
+    <p><strong>Last name:</strong> @Model.Nom</p>
+
+    <a asp-action="EditProfile" class="btn btn-primary me-2">Edit profile</a>
+    <a asp-action="ChangePassword" class="btn btn-secondary">Change password</a>
+  </div>
+</div>

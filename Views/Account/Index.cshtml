@@ -1,0 +1,17 @@
+@model SuiviEntrainementSportif.Models.ApplicationUser
+
+<h2>Account</h2>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Hello @Model.UserName</h5>
+    <p class="card-text"><strong>Email:</strong> @Model.Email</p>
+    <p class="card-text"><strong>First name:</strong> @Model.Prenom</p>
+    <p class="card-text"><strong>Last name:</strong> @Model.Nom</p>
+
+    <form asp-controller="Account" asp-action="Logout" method="post">
+      @Html.AntiForgeryToken()
+      <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+  </div>
+</div>

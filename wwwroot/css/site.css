@@ -17,6 +17,27 @@ html {
   min-height: 100%;
 }
 
-body {
+/* RESPONSIVE TWEAKS */
+/* On small screens keep the important part visible and improve performance */
+@media (max-width: 992px) {
+  body::before {
+    background-position: center ; /* center the image on tablet */
+    background-size: cover;
+    /* Avoid fixed background on mobile for smoother scroll */
+    position: fixed;
+  }
+}
+@media (max-width: 576px) {
+  /* Mobile: use a mobile-friendly crop or smaller image if available */
+  body::before {
+    background-position: top center;  /* show top part of the image */
+    background-size: contain;         /* ensures the whole image can be visible on narrow screens */
+  }
+
+  /* Make main container slightly more opaque for small screens */
+/* Fallback if the image fails to load (keeps a dark background) */
+.no-bg-image body::before {
+  display: none;
+  body {
   margin-bottom: 60px;
 }

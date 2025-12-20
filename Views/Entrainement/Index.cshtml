@@ -1,37 +1,44 @@
-﻿@model List<SuiviEntrainementSportif.Models.Entrainement>
+@model List<SuiviEntrainementSportif.Models.Entrainement>
 
 <h2>Liste des entraînements</h2>
 
-<a href="/Entrainement/Create" class="btn btn-success mb-3">Ajouter</a>
+<a asp-action="Create" class="btn btn-success mb-3">Ajouter</a>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Type</th>
-            <th>Durée</th>
-            <th>Calories</th>
-            <th>Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @foreach (var item in Model)
-        {
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Aucun entraînement trouvé.</div>
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
             <tr>
-                <td>@item.Id</td>
-                <td>@item.Nom</td>
-                <td>@item.Type</td>
-                <td>@item.Duree min</td>
-                <td>@item.CaloriesBrulees</td>
-                <td>@item.Date.ToShortDateString()</td>
-                <td>
-                    <a href="/Entrainement/Edit/@item.Id" class="btn btn-warning btn-sm">Modifier</a>
-                    <a href="/Entrainement/Delete/@item.Id" class="btn btn-danger btn-sm">Supprimer</a>
-                </td>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Type</th>
+                <th>Durée</th>
+                <th>Calories</th>
+                <th>Date</th>
+                <th>Actions</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nom</td>
+                    <td>@item.Type</td>
+                    <td>@($"{item.Duree} min")</td>
+                    <td>@item.CaloriesBrulees</td>
+                    <td>@item.Date.ToShortDateString()</td>
+                    <td>
+                        <a asp-controller="Entrainement" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Modifier</a>
+                        <a asp-controller="Entrainement" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Supprimer</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
