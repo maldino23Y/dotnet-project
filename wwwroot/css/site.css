@@ -1,43 +1,69 @@
-html {
-  font-size: 14px;
+:root{
+  --primary: #0d6efd;
+  --dark: #0b2545;
+  --muted: #6c757d;
+  --accent: #17a2b8;
+  --surface: #ffffff;
+  --bg: #f6f9fc;
+  --radius: .5rem;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+/* Reset and base */
+html{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+,* ,*::before,*::after{box-sizing:inherit}
+body{background:var(--bg);color:#222;margin:0;line-height:1.5;font-size:16px}
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+/* Navbar */
+.navbar-custom{background:linear-gradient(90deg,var(--dark),#123766); margin-bottom: 0; border-bottom: none;} 
+.navbar-custom .navbar-brand{color:#fff;font-weight:700;letter-spacing:.4px}
+.navbar-custom .nav-link{color:rgba(255,255,255,.92)}
+.navbar-custom .nav-link:hover{color:#fff}
+.navbar-custom .btn-link{color:#fff}
 
-html {
-  position: relative;
-  min-height: 100%;
+/* Hero */
+.site-hero{
+  /* Try local image first, then fall back to a neutral Unsplash photo if not present */
+  background-image: linear-gradient(rgba(11,37,69,0.65), rgba(11,37,69,0.35)), url('/images/time-for-fitness.jpg'), url('https://images.unsplash.com/photo-1546484959-f0b2f6c7d1b6?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b7f2b1a9d5c3e9c6a8e8f6b6f2c0a1a');
+  /* show the right side of the local image and shift it vertically so the "TIME" text is visible */
+  background-size: cover, cover, cover;
+  /* adjust the second value (right 30%) to move the image up/down as needed */
+  background-position: center center, right 30%, center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 3.5rem 0 4.5rem 0; /* reduce top padding so hero background starts closer to navbar */
+  margin-bottom: 2.5rem;
+  margin-top: 0; /* ensure hero sits directly under the navbar */
+  min-height: 360px;
+  display: flex;
+  align-items: center;
 }
+.site-hero .hero-content{max-width:720px}
+.site-hero h1{font-size:2.6rem;margin-bottom:.6rem;font-weight:800;line-height:1.05}
+.site-hero p.lead{font-size:1.05rem;color:rgba(255,255,255,.95);max-width:680px}
+.site-hero .btn-cta{background:#fff;color:var(--dark);border-radius:40px;padding:.7rem 1.2rem;font-weight:600}
 
-/* RESPONSIVE TWEAKS */
-/* On small screens keep the important part visible and improve performance */
-@media (max-width: 992px) {
-  body::before {
-    background-position: center ; /* center the image on tablet */
-    background-size: cover;
-    /* Avoid fixed background on mobile for smoother scroll */
-    position: fixed;
-  }
-}
-@media (max-width: 576px) {
-  /* Mobile: use a mobile-friendly crop or smaller image if available */
-  body::before {
-    background-position: top center;  /* show top part of the image */
-    background-size: contain;         /* ensures the whole image can be visible on narrow screens */
-  }
+/* Cards and lists */
+.card{border-radius:var(--radius);box-shadow:0 6px 18px rgba(23,23,23,.06)}
+.card .card-header{background:transparent;border-bottom:0;font-weight:700}
 
-  /* Make main container slightly more opaque for small screens */
-/* Fallback if the image fails to load (keeps a dark background) */
-.no-bg-image body::before {
-  display: none;
-  body {
-  margin-bottom: 60px;
+/* Forms */
+.form-control{border-radius:.5rem;border:1px solid #e6eef7;background:#fff}
+.form-control:focus{box-shadow:0 6px 18px rgba(13,40,77,.08);border-color:var(--primary)}
+.btn-primary{background:var(--primary);border-color:var(--primary);box-shadow:0 6px 18px rgba(13,40,77,.08)}
+.btn-secondary{background:#6c757d;border-color:#6c757d}
+
+/* Tables */
+.table thead th{background:#fbfdff;border-bottom:2px solid #eef3fb}
+
+/* Footer */
+footer.footer{background:#fff;border-top:1px solid #e9eef6;padding:1.25rem 0}
+
+/* Utility tweaks */
+.container {max-width:1100px}
+.muted{color:var(--muted)}
+
+/* Responsive adjustments */
+@media (max-width:767.98px){
+  .site-hero{padding:3rem 0}
+  .site-hero h1{font-size:1.6rem}
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e98NjmHyLdg=",
+  "dgSpecHash": "ec579+ui4Ks=",
   "success": true,
-  "projectFilePath": "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
+  "projectFilePath": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\malda\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -28,7 +28,7 @@
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.0\\microsoft.entityframeworkcore.sqlite.8.0.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.0\\microsoft.entityframeworkcore.sqlite.core.8.0.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.0\\microsoft.entityframeworkcore.sqlserver.8.0.0.nupkg.sha512",
-    "C:\\Users\\malda\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.1\\microsoft.entityframeworkcore.tools.10.0.1.nupkg.sha512",
+    "C:\\Users\\malda\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.0\\microsoft.entityframeworkcore.tools.8.0.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "C:\\Users\\malda\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

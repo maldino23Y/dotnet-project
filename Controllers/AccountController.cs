@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using SuiviEntrainementSportif.Models;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace SuiviEntrainementSportif.Controllers
@@ -21,6 +22,7 @@ namespace SuiviEntrainementSportif.Controllers
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _emailSender = emailSender;
         }               
 
         // GET: /Account
@@ -181,6 +183,44 @@ namespace SuiviEntrainementSportif.Controllers
             return View();
         }
 
+        // GET: /Account/ForgotPassword
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        // POST: /Account/ForgotPassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            // Don't reveal whether the user exists or is confirmed
+            if (user == null)
+            {
+                return RedirectToAction("ForgotPasswordConfirmation");
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var callbackUrl = Url.Action("ResetPassword", "Account", new { token, email = model.Email }, protocol: Request.Scheme);
+            if (string.IsNullOrEmpty(callbackUrl))
+            {
+                var scheme = Request.Scheme ?? "https";
+                var host = Request.Host.HasValue ? Request.Host.Value : "localhost";
+                callbackUrl = $"{scheme}://{host}/Account/ResetPassword?token={WebUtility.UrlEncode(token)}&email={WebUtility.UrlEncode(model.Email)}";
+            }
+
+            await _emailSender.SendEmailAsync(model.Email, "Reset Password",
+                $"Please reset your password by <a href=\"{callbackUrl}\">clicking here</a>.");
+
+            return RedirectToAction("ForgotPasswordConfirmation");
+        }
+
         // POST: /Account/Login
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -198,6 +238,66 @@ namespace SuiviEntrainementSportif.Controllers
 
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             return View(model);
+        }
+
+        // GET: /Account/ResetPassword
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPassword(string? token = null, string? email = null)
+        {
+            if (token == null || email == null)
+            {
+                // show the reset password view without prefilled data
+                return View();
+            }
+
+            var model = new ResetPasswordViewModel { Token = token, Email = email };
+            return View(model);
+        }
+
+        // POST: /Account/ResetPassword
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                // Don't reveal that the user does not exist
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
+        }
+
+        // GET: /Account/ForgotPasswordConfirmation
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        // GET: /Account/ResetPasswordConfirmation
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
         }
 
         [HttpPost]

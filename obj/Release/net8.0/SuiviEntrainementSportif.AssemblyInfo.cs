@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b43075b86256f4b7a5f4bae4f33aa62de4aed2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9511e8c42fa406a2c5b42cbd8fbd0471dad3e8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

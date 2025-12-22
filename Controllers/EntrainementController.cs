@@ -1,22 +1,18 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SuiviEntrainementSportif.Data;
 using SuiviEntrainementSportif.Models;
+using System;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SuiviEntrainementSportif.Controllers
 {
+    [Authorize]
     public class EntrainementController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -46,6 +42,25 @@ namespace SuiviEntrainementSportif.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Entrainement e)
         {
+            // require authenticated user
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            // attach current user id before validation
+            e.ApplicationUserId = userId;
+
+            // default date to today if none provided
+            if (e.Date == default) e.Date = DateTime.UtcNow.Date;
+
+            // ModelState was populated during model binding and may contain errors for
+            // ApplicationUserId and Date (because they were empty during binding). Remove
+            // those entries so validation runs against the updated values.
+            ModelState.Remove(nameof(Entrainement.ApplicationUserId));
+            ModelState.Remove(nameof(Entrainement.Date));
+
             if (!ModelState.IsValid) return View(e);
 
             _context.Entrainements.Add(e);

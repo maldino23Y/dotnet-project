@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {}
+    "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {
+    "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
+        "projectUniqueName": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
         "projectName": "SuiviEntrainementSportif",
-        "projectPath": "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
+        "projectPath": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
         "packagesPath": "C:\\Users\\malda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malda\\Downloads\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\obj\\",
+        "outputPath": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,7 +72,7 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[10.0.1, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
