@@ -74,7 +74,16 @@ namespace SuiviEntrainementSportif.Services
             // Basic rules
             var rnd = new Random();
             // Try to use persistent Exercise entities if available, otherwise use built-in list
-            var exercisesFromDb = await _db.Exercises.Take(50).ToListAsync();
+            List<Exercise> exercisesFromDb = new List<Exercise>();
+            try
+            {
+                exercisesFromDb = await _db.Exercises.Take(50).ToListAsync();
+            }
+            catch
+            {
+                // Exercises table might not exist yet; swallow and use fallback hard-coded list
+                exercisesFromDb = new List<Exercise>();
+            }
             var exerciseOptions = new List<(string Type, List<string> Exercises)>();
             if (exercisesFromDb != null && exercisesFromDb.Any())
             {
@@ -85,14 +94,17 @@ namespace SuiviEntrainementSportif.Services
 
             if (!exerciseOptions.Any())
             {
-                ("Cardio", new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" }),
-                ("Cardio", new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" }),
-                ("Strength", new List<string>{ "Warm-up 10min", "Strength: squats / deadlifts 4x6", "Accessory: lunges / rows" }),
-                ("Strength", new List<string>{ "Warm-up 10min", "Strength: bench / overhead press 4x6", "Accessory: pullups / dips" }),
-                ("Recovery", new List<string>{ "Active recovery: long walk or yoga 30-45min" }),
-                ("Circuit", new List<string>{ "Circuit: kettlebell swings, burpees, box jumps 4 rounds" }),
-                ("Mixed", new List<string>{ "Mixed cardio: bike/run + stretching" })
-            };
+                exerciseOptions = new List<(string Type, List<string> Exercises)>
+                {
+                    ("Cardio", new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" }),
+                    ("Cardio", new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" }),
+                    ("Strength", new List<string>{ "Warm-up 10min", "Strength: squats / deadlifts 4x6", "Accessory: lunges / rows" }),
+                    ("Strength", new List<string>{ "Warm-up 10min", "Strength: bench / overhead press 4x6", "Accessory: pullups / dips" }),
+                    ("Recovery", new List<string>{ "Active recovery: long walk or yoga 30-45min" }),
+                    ("Circuit", new List<string>{ "Circuit: kettlebell swings, burpees, box jumps 4 rounds" }),
+                    ("Mixed", new List<string>{ "Mixed cardio: bike/run + stretching" })
+                };
+            }
 
             for (int i = 0; i < 7; i++)
             {
