@@ -33,5 +33,6 @@ namespace SuiviEntrainementSportif.Data
         public DbSet<WorkoutPlan> WorkoutPlans { get; set; }
         public DbSet<DailyWorkout> DailyWorkouts { get; set; }
         public DbSet<MealPlan> MealPlans { get; set; }
+        public DbSet<Exercise> Exercises { get; set; }
     }
 }   

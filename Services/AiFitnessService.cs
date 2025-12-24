@@ -73,7 +73,17 @@ namespace SuiviEntrainementSportif.Services
 
             // Basic rules
             var rnd = new Random();
-            var exerciseOptions = new List<(string Type, List<string> Exercises)>
+            // Try to use persistent Exercise entities if available, otherwise use built-in list
+            var exercisesFromDb = await _db.Exercises.Take(50).ToListAsync();
+            var exerciseOptions = new List<(string Type, List<string> Exercises)>();
+            if (exercisesFromDb != null && exercisesFromDb.Any())
+            {
+                exerciseOptions = exercisesFromDb.GroupBy(e => e.Type)
+                    .Select(g => (g.Key, g.Select(x => x.Name).ToList()))
+                    .ToList();
+            }
+
+            if (!exerciseOptions.Any())
             {
                 ("Cardio", new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" }),
                 ("Cardio", new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" }),
@@ -153,26 +163,46 @@ namespace SuiviEntrainementSportif.Services
                 Days = new List<DailyMeal>()
             };
 
-            var mealOptions = new List<(string Type, string Breakfast, string Lunch, string Dinner)>
+            // Build meal option sets keyed by a simple type
+            var mealOptions = new Dictionary<string, List<(string Breakfast, string Lunch, string Dinner)>>()
             {
-                ("Balanced", "Oatmeal + fruit + egg", "Grilled chicken, quinoa, veg", "Salmon + salad"),
-                ("HighProtein", "Greek yogurt + nuts", "Steak, sweet potato, veg", "Grilled chicken + veg"),
-                ("LowCarb", "Omelette + spinach", "Salad with tuna", "Grilled fish + broccoli"),
-                ("Recovery", "Smoothie + oats", "Soup + wholegrain bread", "Light protein + salad"),
-                ("Balanced", "Porridge + banana", "Turkey wrap + salad", "Veggie stir-fry + tofu"),
-                ("HighProtein", "Cottage cheese + fruit", "Chicken bowl + brown rice", "Beef stir-fry"),
-                ("LowCal", "Fruit salad + yogurt", "Large salad + eggs", "Soup + salad")
+                ["HighProtein"] = new List<(string,string,string)>{ ("Greek yogurt + nuts","Steak, sweet potato, veg","Grilled chicken + veg"), ("Cottage cheese + fruit","Chicken bowl + brown rice","Beef stir-fry") },
+                ["Balanced"] = new List<(string,string,string)>{ ("Oatmeal + fruit + egg","Grilled chicken, quinoa, veg","Salmon + salad"), ("Porridge + banana","Turkey wrap + salad","Veggie stir-fry + tofu") },
+                ["LowCarb"] = new List<(string,string,string)>{ ("Omelette + spinach","Salad with tuna","Grilled fish + broccoli"), ("Egg muffins","Chicken salad","Zucchini noodles + shrimp") },
+                ["Recovery"] = new List<(string,string,string)>{ ("Smoothie + oats","Soup + wholegrain bread","Light protein + salad"), ("Fruit smoothie","Vegetable soup","Light fish + veg") },
+                ["LowCal"] = new List<(string,string,string)>{ ("Fruit salad + yogurt","Large salad + eggs","Soup + salad") }
             };
 
+            // Try to find the generated workout plan for the same week so we can adapt meals to intensity
+            var workoutPlan = await GetWorkoutPlanAsync(userId);
             for (int i = 0; i < 7; i++)
             {
                 var date = plan.WeekStart.AddDays(i);
                 var meal = new DailyMeal { Date = date };
-                var pick = mealOptions[rnd.Next(mealOptions.Count)];
+
+                // Determine desired meal type based on workout intensity and user goal
+                string desiredType = "Balanced";
+                if (workoutPlan != null)
+                {
+                    var wday = workoutPlan.Days?.FirstOrDefault(d => d.Date.Date == date.Date);
+                    var intensity = wday?.Intensity?.ToLowerInvariant() ?? "moderate";
+                    if (intensity.Contains("high")) desiredType = "HighProtein";
+                    else if (intensity.Contains("moderate") || intensity.Contains("mixed")) desiredType = "Balanced";
+                    else if (intensity.Contains("light") || intensity.Contains("recovery")) desiredType = "Recovery";
+                }
+
+                // tweak by overall goal
+                if (goal == "lose weight") desiredType = desiredType == "HighProtein" ? "HighProtein" : "LowCal";
+                if (goal == "gain muscle") desiredType = "HighProtein";
+
+                // pick a meal option for that type
+                if (!mealOptions.ContainsKey(desiredType)) desiredType = "Balanced";
+                var list = mealOptions[desiredType];
+                var pick = list[new Random().Next(list.Count)];
                 meal.Breakfast = pick.Breakfast + $" (~{(int)(calories * 0.25m)} kcal)";
                 meal.Lunch = pick.Lunch + $" (~{(int)(calories * 0.4m)} kcal)";
                 meal.Dinner = pick.Dinner + $" (~{(int)(calories * 0.35m)} kcal)";
-                meal.Type = pick.Type;
+                meal.Type = desiredType;
                 plan.Days.Add(meal);
             }
 
