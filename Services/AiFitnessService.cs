@@ -1,4 +1,5 @@
 using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using SuiviEntrainementSportif.Data;
@@ -25,6 +26,12 @@ namespace SuiviEntrainementSportif.Services
             _db = db;
         }
 
+        private async Task<ApplicationUser?> FindUserAsync(string identifier)
+        {
+            if (string.IsNullOrWhiteSpace(identifier)) return null;
+            return await _db.Users.FirstOrDefaultAsync(u => u.Id == identifier || u.UserName == identifier || u.Email == identifier);
+        }
+
         // Simple rule-based BMI calculation
         private decimal? CalculateBmi(ApplicationUser user)
         {
@@ -36,7 +43,7 @@ namespace SuiviEntrainementSportif.Services
         // Generate a 7-day workout plan
         public async Task<WorkoutPlan> GenerateWorkoutPlanAsync(string userId)
         {
-            var user = await _db.Users.Include(u => u.WorkoutPlans).FirstOrDefaultAsync(u => u.Id == userId);
+            var user = await FindUserAsync(userId);
             if (user == null) throw new ArgumentException("User not found");
 
             var bmi = CalculateBmi(user);
@@ -97,7 +104,7 @@ namespace SuiviEntrainementSportif.Services
         // Generate a simple weekly meal plan
         public async Task<MealPlan> GenerateMealPlanAsync(string userId)
         {
-            var user = await _db.Users.Include(u => u.MealPlans).FirstOrDefaultAsync(u => u.Id == userId);
+            var user = await FindUserAsync(userId);
             if (user == null) throw new ArgumentException("User not found");
 
             var goal = (user.FitnessGoal ?? "maintain").ToLowerInvariant();
@@ -120,9 +127,9 @@ namespace SuiviEntrainementSportif.Services
                 var meal = new DailyMeal
                 {
                     Date = date,
-                    Breakfast = $"Oatmeal + fruit + 1 protein source (~{(int)(calories*0.25)} kcal)",
-                    Lunch = $"Lean protein, vegetables, whole grains (~{(int)(calories*0.4)} kcal)",
-                    Dinner = $"Light protein + salad (~{(int)(calories*0.35)} kcal)"
+                    Breakfast = $"Oatmeal + fruit + 1 protein source (~{(int)(calories * 0.25m)} kcal)",
+                    Lunch = $"Lean protein, vegetables, whole grains (~{(int)(calories * 0.4m)} kcal)",
+                    Dinner = $"Light protein + salad (~{(int)(calories * 0.35m)} kcal)"
                 };
                 plan.Days.Add(meal);
             }
@@ -134,12 +141,16 @@ namespace SuiviEntrainementSportif.Services
 
         public async Task<WorkoutPlan?> GetWorkoutPlanAsync(string userId)
         {
-            return await _db.WorkoutPlans.Include(w => w.Days).Where(w => w.UserId == userId).OrderByDescending(w => w.Created).FirstOrDefaultAsync();
+            var user = await FindUserAsync(userId);
+            if (user == null) return null;
+            return await _db.WorkoutPlans.Include(w => w.Days).Where(w => w.UserId == user.Id).OrderByDescending(w => w.Created).FirstOrDefaultAsync();
         }
 
         public async Task<MealPlan?> GetMealPlanAsync(string userId)
         {
-            return await _db.MealPlans.Include(m => m.Days).Where(m => m.UserId == userId).OrderByDescending(m => m.Created).FirstOrDefaultAsync();
+            var user = await FindUserAsync(userId);
+            if (user == null) return null;
+            return await _db.MealPlans.Include(m => m.Days).Where(m => m.UserId == user.Id).OrderByDescending(m => m.Created).FirstOrDefaultAsync();
         }
     }
 }

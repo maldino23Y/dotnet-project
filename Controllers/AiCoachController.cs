@@ -20,12 +20,24 @@ namespace SuiviEntrainementSportif.Controllers
         public async Task<IActionResult> GeneratePlan(string userId)
         {
             // allow users to generate their own plan; admins can generate for anyone
-            if (User.Identity?.Name != null && (User.IsInRole("Admin") || User.Identity.Name == userId || User.FindFirst("sub")?.Value == userId))
+            var currentUser = User.Identity?.Name;
+            if (currentUser == null) return Challenge();
+
+            // allow if admin or matches username or id
+            if (User.IsInRole("Admin") || User.Identity?.Name == userId || User.FindFirst("sub")?.Value == userId)
             {
-                var workout = await _ai.GenerateWorkoutPlanAsync(userId);
-                var meal = await _ai.GenerateMealPlanAsync(userId);
+                await _ai.GenerateWorkoutPlanAsync(userId);
+                await _ai.GenerateMealPlanAsync(userId);
                 return RedirectToAction(nameof(ViewPlan), new { userId });
             }
+            // fallback: if userId appears to be username but empty, generate for current user
+            if (string.IsNullOrWhiteSpace(userId))
+            {
+                await _ai.GenerateWorkoutPlanAsync(currentUser!);
+                await _ai.GenerateMealPlanAsync(currentUser!);
+                return RedirectToAction(nameof(ViewPlan), new { userId = currentUser });
+            }
+
             return Forbid();
         }
 
