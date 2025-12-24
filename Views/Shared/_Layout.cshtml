@@ -31,7 +31,7 @@
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
-                                <a class="nav-link" asp-controller="AiCoach" asp-action="ViewPlan" asp-route-userId="@User.Identity.Name">AI Coach</a>
+                                <a class="nav-link" asp-controller="AiCoach" asp-action="GeneratePlan" asp-route-userId="@User.Identity.Name">AI Coach</a>
                             </li>
                         }
                     </ul>
