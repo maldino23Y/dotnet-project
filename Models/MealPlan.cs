@@ -23,5 +23,7 @@ namespace SuiviEntrainementSportif.Models
         public string Breakfast { get; set; } = string.Empty;
         public string Lunch { get; set; } = string.Empty;
         public string Dinner { get; set; } = string.Empty;
+        // add a simple Type to categorize the day's focus
+        public string? Type { get; set; } // e.g. HighProtein, LowCarb, Balanced, Recovery
     }
 }

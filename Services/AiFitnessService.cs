@@ -73,15 +73,15 @@ namespace SuiviEntrainementSportif.Services
 
             // Basic rules
             var rnd = new Random();
-            var exerciseOptions = new List<List<string>>
+            var exerciseOptions = new List<(string Type, List<string> Exercises)>
             {
-                new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" },
-                new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" },
-                new List<string>{ "Warm-up 10min", "Strength: squats / deadlifts 4x6", "Accessory: lunges / rows" },
-                new List<string>{ "Warm-up 10min", "Strength: bench / overhead press 4x6", "Accessory: pullups / dips" },
-                new List<string>{ "Active recovery: long walk or yoga 30-45min" },
-                new List<string>{ "Circuit: kettlebell swings, burpees, box jumps 4 rounds" },
-                new List<string>{ "Mixed cardio: bike/run + stretching" }
+                ("Cardio", new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" }),
+                ("Cardio", new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" }),
+                ("Strength", new List<string>{ "Warm-up 10min", "Strength: squats / deadlifts 4x6", "Accessory: lunges / rows" }),
+                ("Strength", new List<string>{ "Warm-up 10min", "Strength: bench / overhead press 4x6", "Accessory: pullups / dips" }),
+                ("Recovery", new List<string>{ "Active recovery: long walk or yoga 30-45min" }),
+                ("Circuit", new List<string>{ "Circuit: kettlebell swings, burpees, box jumps 4 rounds" }),
+                ("Mixed", new List<string>{ "Mixed cardio: bike/run + stretching" })
             };
 
             for (int i = 0; i < 7; i++)
@@ -94,20 +94,26 @@ namespace SuiviEntrainementSportif.Services
                 {
                     day.Intensity = "Moderate";
                     day.DurationMinutes = 40 + rnd.Next(-5, 10);
-                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
+                    var pick = exerciseOptions[rnd.Next(exerciseOptions.Count)];
+                    day.Type = pick.Type;
+                    day.Exercises = string.Join("||", pick.Exercises);
                 }
                 else if (goal == "gain muscle")
                 {
                     day.Intensity = "High";
                     day.DurationMinutes = 45 + rnd.Next(0, 20);
-                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
+                    var pick2 = exerciseOptions[rnd.Next(exerciseOptions.Count)];
+                    day.Type = pick2.Type;
+                    day.Exercises = string.Join("||", pick2.Exercises);
                 }
                 else
                 {
                     // maintain
                     day.Intensity = "Light-Moderate";
                     day.DurationMinutes = 25 + rnd.Next(0, 20);
-                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
+                    var pick3 = exerciseOptions[rnd.Next(exerciseOptions.Count)];
+                    day.Type = pick3.Type;
+                    day.Exercises = string.Join("||", pick3.Exercises);
                 }
 
                 // Add a rest/light day every 3rd day for high intensity
@@ -147,16 +153,26 @@ namespace SuiviEntrainementSportif.Services
                 Days = new List<DailyMeal>()
             };
 
+            var mealOptions = new List<(string Type, string Breakfast, string Lunch, string Dinner)>
+            {
+                ("Balanced", "Oatmeal + fruit + egg", "Grilled chicken, quinoa, veg", "Salmon + salad"),
+                ("HighProtein", "Greek yogurt + nuts", "Steak, sweet potato, veg", "Grilled chicken + veg"),
+                ("LowCarb", "Omelette + spinach", "Salad with tuna", "Grilled fish + broccoli"),
+                ("Recovery", "Smoothie + oats", "Soup + wholegrain bread", "Light protein + salad"),
+                ("Balanced", "Porridge + banana", "Turkey wrap + salad", "Veggie stir-fry + tofu"),
+                ("HighProtein", "Cottage cheese + fruit", "Chicken bowl + brown rice", "Beef stir-fry"),
+                ("LowCal", "Fruit salad + yogurt", "Large salad + eggs", "Soup + salad")
+            };
+
             for (int i = 0; i < 7; i++)
             {
                 var date = plan.WeekStart.AddDays(i);
-                var meal = new DailyMeal
-                {
-                    Date = date,
-                    Breakfast = $"Oatmeal + fruit + 1 protein source (~{(int)(calories * 0.25m)} kcal)",
-                    Lunch = $"Lean protein, vegetables, whole grains (~{(int)(calories * 0.4m)} kcal)",
-                    Dinner = $"Light protein + salad (~{(int)(calories * 0.35m)} kcal)"
-                };
+                var meal = new DailyMeal { Date = date };
+                var pick = mealOptions[rnd.Next(mealOptions.Count)];
+                meal.Breakfast = pick.Breakfast + $" (~{(int)(calories * 0.25m)} kcal)";
+                meal.Lunch = pick.Lunch + $" (~{(int)(calories * 0.4m)} kcal)";
+                meal.Dinner = pick.Dinner + $" (~{(int)(calories * 0.35m)} kcal)";
+                meal.Type = pick.Type;
                 plan.Days.Add(meal);
             }
 

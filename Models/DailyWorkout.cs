@@ -10,6 +10,8 @@ namespace SuiviEntrainementSportif.Models
         public WorkoutPlan? WorkoutPlan { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; } = "Workout";
+        // e.g. "Cardio", "Strength", "Mobility", "Recovery"
+        public string? Type { get; set; }
         // stored as a single serialized string in the DB (|| separated)
         public string? Exercises { get; set; }
         public int DurationMinutes { get; set; }
