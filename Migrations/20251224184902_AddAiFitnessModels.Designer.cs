@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SuiviEntrainementSportif.Data;
 
@@ -11,9 +12,11 @@ using SuiviEntrainementSportif.Data;
 namespace SuiviEntrainementSportif.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251224184902_AddAiFitnessModels")]
+    partial class AddAiFitnessModels
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -187,7 +190,7 @@ namespace SuiviEntrainementSportif.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal?>("HeightCm")
-                        .HasColumnType("decimal(5,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -229,7 +232,7 @@ namespace SuiviEntrainementSportif.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<decimal?>("WeightKg")
-                        .HasColumnType("decimal(5,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -270,9 +273,6 @@ namespace SuiviEntrainementSportif.Migrations
                     b.Property<int>("MealPlanId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.HasIndex("MealPlanId");
@@ -302,9 +302,6 @@ namespace SuiviEntrainementSportif.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WorkoutPlanId")
@@ -361,31 +358,6 @@ namespace SuiviEntrainementSportif.Migrations
                     b.HasIndex("UtilisateurId");
 
                     b.ToTable("Entrainements");
-                });
-
-            modelBuilder.Entity("SuiviEntrainementSportif.Models.Exercise", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Exercises");
                 });
 
             modelBuilder.Entity("SuiviEntrainementSportif.Models.MealPlan", b =>
