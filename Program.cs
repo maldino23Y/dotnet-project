@@ -55,34 +55,16 @@ using (var scope = app.Services.CreateScope())
             var pending = await db.Database.GetPendingMigrationsAsync();
             if (pending != null && pending.Any())
             {
-                // If the Identity tables already exist in the database but __EFMigrationsHistory is empty,
-                // applying migrations will attempt to recreate tables and fail. Detect presence of a known
-                // Identity table and skip migrations in that case (development scenario).
-                bool roleTableExists = false;
+                // Apply any pending migrations. In some dev environments the Identity tables may exist
+                // but lack newer columns; ensure migrations are applied so EF queries match the schema.
                 try
                 {
-                    await conn.OpenAsync();
-                    using var cmdCheck = conn.CreateCommand();
-                    cmdCheck.CommandText = "SELECT OBJECT_ID(N'dbo.AspNetRoles')";
-                    var objRole = await cmdCheck.ExecuteScalarAsync();
-                    roleTableExists = objRole != null && objRole != DBNull.Value;
+                    await db.Database.MigrateAsync();
                 }
                 catch (Exception ex)
                 {
-                    logger.LogWarning(ex, "Failed checking for existing Identity tables; will attempt to migrate.");
-                }
-                finally
-                {
-                    try { await conn.CloseAsync(); } catch { }
-                }
-
-                if (roleTableExists)
-                {
-                    logger.LogWarning("Identity tables already exist but migrations are pending. Skipping automatic migration to avoid duplicate-object errors. To fix: either drop the database and apply migrations, or create a baseline migration with '--ignore-changes' and run 'dotnet ef database update'.");
-                }
-                else
-                {
-                    await db.Database.MigrateAsync();
+                    logger.LogError(ex, "Automatic migration failed. You can run 'dotnet ef database update' manually to apply migrations.");
+                    throw;
                 }
             }
             else
