@@ -118,7 +118,9 @@ namespace SuiviEntrainementSportif.Services
                     day.DurationMinutes = 40 + rnd.Next(-5, 10);
                     var pick = exerciseOptions[rnd.Next(exerciseOptions.Count)];
                     day.Type = pick.Type;
-                    day.Exercises = string.Join("||", pick.Exercises);
+                    var exList = pick.Exercises ?? new List<string>();
+                    var selected = exList.OrderBy(x => rnd.Next()).Take(Math.Min(4, exList.Count)).ToList();
+                    day.Exercises = string.Join("||", selected);
                 }
                 else if (goal == "gain muscle")
                 {
@@ -126,7 +128,9 @@ namespace SuiviEntrainementSportif.Services
                     day.DurationMinutes = 45 + rnd.Next(0, 20);
                     var pick2 = exerciseOptions[rnd.Next(exerciseOptions.Count)];
                     day.Type = pick2.Type;
-                    day.Exercises = string.Join("||", pick2.Exercises);
+                    var exList2 = pick2.Exercises ?? new List<string>();
+                    var selected2 = exList2.OrderBy(x => rnd.Next()).Take(Math.Min(5, exList2.Count)).ToList();
+                    day.Exercises = string.Join("||", selected2);
                 }
                 else
                 {
@@ -135,7 +139,9 @@ namespace SuiviEntrainementSportif.Services
                     day.DurationMinutes = 25 + rnd.Next(0, 20);
                     var pick3 = exerciseOptions[rnd.Next(exerciseOptions.Count)];
                     day.Type = pick3.Type;
-                    day.Exercises = string.Join("||", pick3.Exercises);
+                    var exList3 = pick3.Exercises ?? new List<string>();
+                    var selected3 = exList3.OrderBy(x => rnd.Next()).Take(Math.Min(3, exList3.Count)).ToList();
+                    day.Exercises = string.Join("||", selected3);
                 }
 
                 // Add a rest/light day every 3rd day for high intensity
@@ -187,6 +193,7 @@ namespace SuiviEntrainementSportif.Services
 
             // Try to find the generated workout plan for the same week so we can adapt meals to intensity
             var workoutPlan = await GetWorkoutPlanAsync(userId);
+            var rnd = new Random();
             for (int i = 0; i < 7; i++)
             {
                 var date = plan.WeekStart.AddDays(i);
@@ -210,11 +217,13 @@ namespace SuiviEntrainementSportif.Services
                 // pick a meal option for that type
                 if (!mealOptions.ContainsKey(desiredType)) desiredType = "Balanced";
                 var list = mealOptions[desiredType];
-                var pick = list[new Random().Next(list.Count)];
+                // choose a different meal each day by combining random and day index
+                var pickIndex = (rnd.Next(list.Count) + i) % list.Count;
+                var pick = list[pickIndex];
                 meal.Breakfast = pick.Breakfast + $" (~{(int)(calories * 0.25m)} kcal)";
                 meal.Lunch = pick.Lunch + $" (~{(int)(calories * 0.4m)} kcal)";
                 meal.Dinner = pick.Dinner + $" (~{(int)(calories * 0.35m)} kcal)";
-                meal.Type = desiredType;
+                meal.Type = desiredType + $"-{pickIndex}";
                 plan.Days.Add(meal);
             }
 
