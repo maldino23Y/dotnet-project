@@ -1,0 +1,55 @@
+@model SuiviEntrainementSportif.Controllers.AiPlanViewModel
+@using System.Globalization
+@{
+    ViewData["Title"] = "AI Plan";
+}
+<div class="container py-4">
+    <h2>Weekly Workout</h2>
+    @if (Model.WorkoutPlan == null)
+    {
+        <p>No workout plan found. <form method="post" asp-controller="AiCoach" asp-action="GeneratePlan" asp-route-userId="@User.Identity.Name"><button class="btn btn-primary">Generate Plan</button></form></p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var day in Model.WorkoutPlan.Days)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>@day.Date.ToString("ddd dd") - @day.Intensity</h5>
+                            <p>Duration: @day.DurationMinutes min</p>
+                            <ul>
+                                @foreach(var ex in day.Exercises ?? new List<string>()) { <li>@ex</li> }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <h2 class="mt-4">Weekly Meal Plan</h2>
+    @if (Model.MealPlan == null)
+    {
+        <p>No meal plan found.</p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach(var day in Model.MealPlan.Days)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>@day.Date.ToString("ddd dd")</h5>
+                            <p><strong>Breakfast:</strong> @day.Breakfast</p>
+                            <p><strong>Lunch:</strong> @day.Lunch</p>
+                            <p><strong>Dinner:</strong> @day.Dinner</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

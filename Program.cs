@@ -30,6 +30,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 
 // register IEmailSender, etc.
 builder.Services.AddSingleton<IEmailSender, SuiviEntrainementSportif.Services.DummyEmailSender>();
+// register AI fitness service
+builder.Services.AddScoped<SuiviEntrainementSportif.Services.IAiFitnessService, SuiviEntrainementSportif.Services.AiFitnessService>();
 
 var app = builder.Build();
 
