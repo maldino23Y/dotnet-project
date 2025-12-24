@@ -15,6 +15,8 @@ namespace SuiviEntrainementSportif.Services
         Task<MealPlan> GenerateMealPlanAsync(string userId);
         Task<WorkoutPlan?> GetWorkoutPlanAsync(string userId);
         Task<MealPlan?> GetMealPlanAsync(string userId);
+        Task<ApplicationUser?> FindUserForControllerAsync(string identifier);
+        Task UpdateUserAsync(ApplicationUser user);
     }
 
     public class AiFitnessService : IAiFitnessService
@@ -30,6 +32,18 @@ namespace SuiviEntrainementSportif.Services
         {
             if (string.IsNullOrWhiteSpace(identifier)) return null;
             return await _db.Users.FirstOrDefaultAsync(u => u.Id == identifier || u.UserName == identifier || u.Email == identifier);
+        }
+
+        // Helper methods exposed via interface for controller usage
+        public async Task<ApplicationUser?> FindUserForControllerAsync(string identifier)
+        {
+            return await FindUserAsync(identifier);
+        }
+
+        public async Task UpdateUserAsync(ApplicationUser user)
+        {
+            _db.Users.Update(user);
+            await _db.SaveChangesAsync();
         }
 
         // Simple rule-based BMI calculation
