@@ -72,6 +72,18 @@ namespace SuiviEntrainementSportif.Services
             };
 
             // Basic rules
+            var rnd = new Random();
+            var exerciseOptions = new List<List<string>>
+            {
+                new List<string>{ "Warm-up 10min", "Interval run 20min", "Bodyweight circuit: pushups/squats/planks 3 rounds", "Cool-down" },
+                new List<string>{ "Warm-up 10min", "Hill sprints or cycling 20min", "Core + mobility 15min" },
+                new List<string>{ "Warm-up 10min", "Strength: squats / deadlifts 4x6", "Accessory: lunges / rows" },
+                new List<string>{ "Warm-up 10min", "Strength: bench / overhead press 4x6", "Accessory: pullups / dips" },
+                new List<string>{ "Active recovery: long walk or yoga 30-45min" },
+                new List<string>{ "Circuit: kettlebell swings, burpees, box jumps 4 rounds" },
+                new List<string>{ "Mixed cardio: bike/run + stretching" }
+            };
+
             for (int i = 0; i < 7; i++)
             {
                 var date = plan.WeekStart.AddDays(i);
@@ -81,21 +93,21 @@ namespace SuiviEntrainementSportif.Services
                 if (goal == "lose weight")
                 {
                     day.Intensity = "Moderate";
-                    day.DurationMinutes = 40;
-                    day.Exercises = new List<string> { "Warm-up 10min", "Cardio 20-25min (running/cycling)", "Bodyweight circuit 3 rounds", "Cool-down" };
+                    day.DurationMinutes = 40 + rnd.Next(-5, 10);
+                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
                 }
                 else if (goal == "gain muscle")
                 {
                     day.Intensity = "High";
-                    day.DurationMinutes = 50;
-                    day.Exercises = new List<string> { "Warm-up 10min", "Resistance training (upper/lower split)", "Compound lifts: squats/deadlift/bench (3 sets)", "Accessory work" };
+                    day.DurationMinutes = 45 + rnd.Next(0, 20);
+                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
                 }
                 else
                 {
                     // maintain
                     day.Intensity = "Light-Moderate";
-                    day.DurationMinutes = 30;
-                    day.Exercises = new List<string> { "Warm-up 5-10min", "Mixed cardio 15-20min", "Mobility and core" };
+                    day.DurationMinutes = 25 + rnd.Next(0, 20);
+                    day.Exercises = string.Join("||", exerciseOptions[rnd.Next(exerciseOptions.Count)]);
                 }
 
                 // Add a rest/light day every 3rd day for high intensity
@@ -103,7 +115,7 @@ namespace SuiviEntrainementSportif.Services
                 {
                     day.Intensity = "Light";
                     day.DurationMinutes = 25;
-                    day.Exercises = new List<string> { "Active recovery: walking or stretching" };
+                    day.Exercises = string.Join("||", new List<string>{ "Active recovery: walking or stretching" });
                 }
 
                 plan.Days.Add(day);

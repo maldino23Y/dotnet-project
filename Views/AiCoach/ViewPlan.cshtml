@@ -20,7 +20,7 @@
                             <h5>@day.Date.ToString("ddd dd") - @day.Intensity</h5>
                             <p>Duration: @day.DurationMinutes min</p>
                             <ul>
-                                @foreach(var ex in day.Exercises ?? new List<string>()) { <li>@ex</li> }
+                                @foreach(var ex in day.GetExercisesList()) { <li>@ex</li> }
                             </ul>
                         </div>
                     </div>
