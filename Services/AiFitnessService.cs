@@ -52,7 +52,7 @@ namespace SuiviEntrainementSportif.Services
 
             var plan = new WorkoutPlan
             {
-                UserId = userId,
+                UserId = user.Id,
                 WeekStart = DateTime.UtcNow.Date,
                 Days = new List<DailyWorkout>()
             };
@@ -116,7 +116,7 @@ namespace SuiviEntrainementSportif.Services
 
             var plan = new MealPlan
             {
-                UserId = userId,
+                UserId = user.Id,
                 WeekStart = DateTime.UtcNow.Date,
                 Days = new List<DailyMeal>()
             };
