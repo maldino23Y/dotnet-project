@@ -27,6 +27,13 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Entrainement" asp-action="Index">Entrainements</a>
                         </li>
+                        @* AI Coach link for signed-in users *@
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="AiCoach" asp-action="ViewPlan" asp-route-userId="@User.Identity.Name">AI Coach</a>
+                            </li>
+                        }
                     </ul>
 
                     @{
