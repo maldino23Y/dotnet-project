@@ -5,14 +5,14 @@
 }
 <div class="container py-4">
     <h2>Weekly Workout</h2>
-    @if (Model.WorkoutPlan == null)
+    @if (Model?.WorkoutPlan == null)
     {
         <p>No workout plan found. <form method="post" asp-controller="AiCoach" asp-action="GeneratePlan" asp-route-userId="@User.Identity.Name"><button class="btn btn-primary">Generate Plan</button></form></p>
     }
     else
     {
         <div class="row">
-            @foreach (var day in Model.WorkoutPlan.Days)
+            @foreach (var day in Model.WorkoutPlan?.Days ?? Enumerable.Empty<SuiviEntrainementSportif.Models.DailyWorkout>())
             {
                 <div class="col-md-4 mb-3">
                     <div class="card">
@@ -30,14 +30,14 @@
     }
 
     <h2 class="mt-4">Weekly Meal Plan</h2>
-    @if (Model.MealPlan == null)
+    @if (Model?.MealPlan == null)
     {
         <p>No meal plan found.</p>
     }
     else
     {
         <div class="row">
-            @foreach(var day in Model.MealPlan.Days)
+            @foreach(var day in Model.MealPlan?.Days ?? Enumerable.Empty<SuiviEntrainementSportif.Models.DailyMeal>())
             {
                 <div class="col-md-4 mb-3">
                     <div class="card">

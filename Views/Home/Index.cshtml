@@ -1,8 +1,69 @@
+@model SuiviEntrainementSportif.Models.DashboardViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    
+<div class="container py-4">
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Streak</h6>
+                    <p class="display-6">🔥 @Model?.StreakDays</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Total Workouts</h6>
+                    <p class="display-6">@Model?.TotalWorkouts</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Calories Burned</h6>
+                    <p class="display-6">@Model?.CaloriesBurned kcal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Recent Workouts</h3>
+    @if (Model?.RecentWorkouts != null && Model.RecentWorkouts.Any())
+    {
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Duration</th>
+                        <th>Calories</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var w in Model.RecentWorkouts)
+                    {
+                        <tr>
+                            <td>@w.Date.ToShortDateString()</td>
+                            <td>@w.Nom</td>
+                            <td>@w.Type</td>
+                            <td>@w.Duree min</td>
+                            <td>@w.CaloriesBrulees</td>
+                            <td><a asp-controller="Entrainement" asp-action="Edit" asp-route-id="@w.Id" class="btn btn-sm btn-outline-primary">Edit</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">No recent workouts found. Add one!</div>
+    }
 </div>

@@ -24,13 +24,13 @@
 
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
+                        <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "Entrainement" ? "active" : "")">
                             <a class="nav-link" asp-controller="Entrainement" asp-action="Index">Entrainements</a>
                         </li>
                         @* AI Coach link for signed-in users *@
                         @if (SignInManager.IsSignedIn(User))
                         {
-                            <li class="nav-item">
+                            <li class="nav-item @(ViewContext.RouteData.Values["controller"]?.ToString() == "AiCoach" ? "active" : "")">
                                 <a class="nav-link" asp-controller="AiCoach" asp-action="GeneratePlan">AI Coach</a>
                             </li>
                         }
@@ -77,13 +77,13 @@
             </div>
         </nav>
 
-        <section class="site-hero">
+        <section class="site-hero" style="background-image: url('/images/time-for-fitness.jpg'); background-size:cover; background-position:center;">
             <div class="container hero-content text-white">
-                <h1>Suivi Sport — suivez vos entraînements</h1>
-                <p class="lead">Enregistrez vos séances, suivez vos progrès et atteignez vos objectifs grâce à un suivi simple et intuitif.</p>
+                <h1 class="display-4 fw-bold">Suivi Sport — Suivez vos entraînements</h1>
+                <p class="lead">Enregistrez vos séances, suivez vos progrès et atteignez vos objectifs.</p>
                 <p>
-                    <a class="btn btn-cta me-2" asp-controller="Entrainement" asp-action="Create">Ajouter un entraînement</a>
-                    <a class="btn btn-outline-light" asp-controller="Entrainement" asp-action="Index">Voir mes entraînements</a>
+                    <a class="btn btn-primary btn-lg me-2" asp-controller="Entrainement" asp-action="Create"><i class="bi bi-plus-circle me-1"></i>Ajouter un entraînement</a>
+                    <a class="btn btn-outline-light btn-lg" asp-controller="Entrainement" asp-action="Index"><i class="bi bi-list-check me-1"></i>Voir mes entraînements</a>
                 </p>
             </div>
         </section>

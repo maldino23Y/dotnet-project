@@ -1,0 +1,17 @@
+@model List<SuiviEntrainementSportif.Models.Entrainement>
+
+<div class="row">
+@foreach(var w in Model)
+{
+    <div class="col-md-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@w.Nom</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@w.Type - @w.Date.ToShortDateString()</h6>
+                <p class="card-text">Duration: @w.Duree min<br/>Calories: @w.CaloriesBrulees</p>
+                <a asp-controller="Entrainement" asp-action="Edit" asp-route-id="@w.Id" class="btn btn-sm btn-outline-primary">Edit</a>
+            </div>
+        </div>
+    </div>
+}
+</div>

@@ -84,10 +84,20 @@ namespace SuiviEntrainementSportif.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Entrainement e)
         {
-            if (!ModelState.IsValid) return View(e);
-
+            // Find existing first to preserve ApplicationUserId and avoid validation errors
             var existing = await _context.Entrainements.FindAsync(e.Id);
             if (existing == null) return NotFound();
+
+            // Preserve user id
+            e.ApplicationUserId = existing.ApplicationUserId;
+            // If date not provided keep existing
+            if (e.Date == default) e.Date = existing.Date;
+
+            // Remove server-side validation entries that were empty during binding
+            ModelState.Remove(nameof(Entrainement.ApplicationUserId));
+            ModelState.Remove(nameof(Entrainement.Date));
+
+            if (!ModelState.IsValid) return View(e);
 
             // Update fields
             existing.Nom = e.Nom;

@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Progress";
+}
+<div class="container py-4">
+    <h2>Progress</h2>
+    <canvas id="activityChart" width="800" height="300"></canvas>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        (async function(){
+            const userId = document.querySelector('meta[name="user-id"]')?.getAttribute('content') || '';
+            const res = await fetch('/Progress/WeeklyActivity?userId=' + encodeURIComponent(userId));
+            const data = await res.json();
+            const ctx = document.getElementById('activityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.dates,
+                    datasets: [{ label: 'Minutes', data: data.values, borderColor: 'rgb(13,40,77)', tension: 0.2 }]
+                },
+                options: { scales: { x: { display: true }, y: { beginAtZero: true } } }
+            });
+        })();
+    </script>
+}
