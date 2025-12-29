@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {}
+    "G:\\app\\dotnet project\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {}
   },
   "projects": {
-    "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {
+    "G:\\app\\dotnet project\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
+        "projectUniqueName": "G:\\app\\dotnet project\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
         "projectName": "SuiviEntrainementSportif",
-        "projectPath": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
-        "packagesPath": "C:\\Users\\malda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\malda\\OneDrive\\Desktop\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\obj\\",
+        "projectPath": "G:\\app\\dotnet project\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\SuiviEntrainementSportif.csproj",
+        "packagesPath": "C:\\Users\\test\\.nuget\\packages\\",
+        "outputPath": "G:\\app\\dotnet project\\dotnet project\\Suivi d'entrainement sportif\\Suivi d'entrainement sportif\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\malda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\test\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

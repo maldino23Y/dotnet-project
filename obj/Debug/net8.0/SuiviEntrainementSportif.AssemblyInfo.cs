@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd48d1fd8594821aa8d3ef7e3159f8158ac5042c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15b19eaaf6b0a76a0a8d6c0f743f6df9e4b98c6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SuiviEntrainementSportif")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
